@@ -1,0 +1,98 @@
+@import '../../responsive.scss';
+
+.profile{
+    display: flex;
+    height: 100%;
+
+
+    @include md{
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .details{
+        flex: 3;
+        overflow-y: scroll;
+        padding-bottom: 30px;
+
+
+        @include md{
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding-right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1{
+                    font-weight: 300;
+                }
+                h2{
+                    font-weight: 300;
+                }
+
+                button{
+                    padding: 10px 20px;
+                    background-color: #fece51;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+
+
+            .info{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 25px;
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+
+                img{
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+
+
+
+        }
+    }
+
+    
+
+
+
+    .chatContainer{
+        flex: 2;
+        background-color: #fcf5f3;
+
+        @include md{
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper{
+            padding: 0px 20px;
+            height: 100%;
+        }
+    }
+
+
+
+}
